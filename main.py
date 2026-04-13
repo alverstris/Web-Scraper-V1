@@ -5,6 +5,7 @@ import json
 from openai import OpenAI
 import csv
 from ukpostcodeutils import validation
+from config import keyC,keyG
 
 is_model_ass = 0
 successfulruns = 0
@@ -13,7 +14,7 @@ full_failure = 0
 
 print("starting program")
 
-client = OpenAI(api_key = r"sk")
+client = OpenAI(api_key = keyC)
 
 #&maxDaysSinceAdded=14
 test_url = r"https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=POSTCODE%5E3700772&radius=10.0&channel=RENT&transactionType=LETTING&furnishTypes=furnished&minBathrooms=1&letType=longTerm&dontShow=retirement&minPrice=200&sortType=6&displayLocationIdentifier=undefined&maxPrice=3000&minBedrooms=3&index="
@@ -175,7 +176,7 @@ while page_check == 0:
 
         headers = {
             'Content-Type': 'application/json',
-            'X-Goog-Api-Key': 'x',
+            'X-Goog-Api-Key': keyG,
             'X-Goog-FieldMask': 'routes.duration',
         }
         json_data = {
@@ -207,7 +208,7 @@ while page_check == 0:
                 latlong = data["data"]["attributes"]["location"]
                 headers = {
                 'Content-Type': 'application/json',
-                'X-Goog-Api-Key': 'x',
+                'X-Goog-Api-Key': keyG,
                 'X-Goog-FieldMask': 'routes.duration',
                 }
                 json_data = {
@@ -240,7 +241,7 @@ while page_check == 0:
             continue
         headers = {
                 'Content-Type': 'application/json',
-                'X-Goog-Api-Key': 'x',
+                'X-Goog-Api-Key': keyG,
                 'X-Goog-FieldMask': 'routes.duration',
             }
 
@@ -271,7 +272,7 @@ while page_check == 0:
             latlong = data["data"]["attributes"]["location"]
             headers = {
             'Content-Type': 'application/json',
-            'X-Goog-Api-Key': 'x',
+            'X-Goog-Api-Key': keyG,
             'X-Goog-FieldMask': 'routes.duration',
             }
             json_data = {
