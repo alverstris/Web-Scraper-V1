@@ -1,9 +1,10 @@
 import requests as req
 import json
+from config import keyG
 
 # headers = {
 #     'Content-Type': 'application/json',
-#     'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+#     'X-Goog-Api-Key': keyG,
 #     'X-Goog-FieldMask': 'routes.duration,routes.legs.steps.travelMode,routes.legs.steps.staticDuration',
 # }
 # json_data = {
@@ -50,7 +51,7 @@ import json
 
 location_headers = {
     'Content-Type': 'application/json',
-    'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+    'X-Goog-Api-Key': keyG,
     'X-Goog-FieldMask': 'suggestions.placePrediction',
 }
 location_json_data = {

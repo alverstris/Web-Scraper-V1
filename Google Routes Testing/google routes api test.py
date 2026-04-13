@@ -1,9 +1,10 @@
 import requests as req
 import json
+from config import keyG
 
 headers = {
     'Content-Type': 'application/json',
-    'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+    'X-Goog-Api-Key': keyG,
     'X-Goog-FieldMask': 'routes.duration',
 }
 

@@ -1,6 +1,7 @@
 from openai import OpenAI
+from config import keyC
 
-client = OpenAI(api_key = r"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")
+client = OpenAI(api_key = keyC)
 
 # response = client.responses.create(
 #     model="gpt-4o-mini-2024-07-18",

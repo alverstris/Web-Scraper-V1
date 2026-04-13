@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import numpy as np
 import json
 import csv
+from config import keyG
 
 user_duration = 41 * 60 # max transit length in seconds
 user_walk_duration = 16 * 60
@@ -123,7 +124,7 @@ while page_check == 0:
         
         headers = {
         'Content-Type': 'application/json',
-        'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+        'X-Goog-Api-Key': keyG,
         'X-Goog-FieldMask': 'routes.duration,routes.legs.steps.travelMode,routes.legs.steps.staticDuration',
         }
         json_data = {

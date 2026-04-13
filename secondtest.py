@@ -2,6 +2,7 @@
 # from bs4 import BeautifulSoup as bs
 # import csv
 # import json
+# from config import keyG
 # # test_url = r"https://www.rightmove.co.uk/property-to-rent/find.html?searchLocation=W2&useLocationIdentifier=true&locationIdentifier=OUTCODE%5E2762&radius=5.0&letType=longTerm&minBedrooms=5&maxBedrooms=5"
 
 # # website = req.get(str(test_url))
@@ -48,7 +49,7 @@
 
 # headers = {
 #     'Content-Type': 'application/json',
-#     'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+#     'X-Goog-Api-Key': keyG,
 #     'X-Goog-FieldMask': 'routes.duration',
 # }
 # json_data = {
@@ -80,7 +81,7 @@
 
 # headers = {
 #             'Content-Type': 'application/json',
-#             'X-Goog-Api-Key': 'AIzaSyD_KoGaoZA2Qrw4ljwhS8DHz3JMzusq-1I',
+#             'X-Goog-Api-Key': keyG,
 #             'X-Goog-FieldMask': 'routes.duration',
 #         }
 # json_data = {
